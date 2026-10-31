@@ -42,6 +42,7 @@ h3:before{content:"";width:4px;height:14px;border-radius:2px;background:var(--go
 .colors{display:grid;gap:8px}
 .crow{display:flex;align-items:center;gap:10px}
 .crow .lv{width:58px;font-size:12px;color:var(--mute)}
+.crow .stars{font-size:18px;letter-spacing:1px;color:#e0a800;text-shadow:0 1px 0 #b07d00}
 .sw{display:flex;gap:4px}
 .sw i{width:22px;height:22px;border-radius:50%;border:1px solid rgba(0,0,0,.12);display:block}
 .crow .nm{font-size:14px}
@@ -216,9 +217,9 @@ function dayHTML(r){
     ${c.jn.length?'<div class="chips">'+c.jn.map(x=>'<span class="chip">'+x+'</span>').join('')+'</div>':'<div class="empty">今日無特別提示，平穩度過</div>'}
   </section>
   <section class="card"><h3>幸運顏色</h3><div class="colors">
-    <div class="crow"><span class="lv">👍👍👍 最佳</span>${sw(r[8])}<span class="nm">${r[8]}</span></div>
-    <div class="crow"><span class="lv">👍👍 次佳</span>${sw(r[9])}<span class="nm">${r[9]}</span></div>
-    <div class="crow"><span class="lv">👍 可用</span>${sw(r[10])}<span class="nm">${r[10]}</span></div>
+    <div class="crow"><span class="lv stars">★★★</span>${sw(r[8])}<span class="nm">${r[8]}</span></div>
+    <div class="crow"><span class="lv stars">★★</span>${sw(r[9])}<span class="nm">${r[9]}</span></div>
+    <div class="crow"><span class="lv stars">★</span>${sw(r[10])}<span class="nm">${r[10]}</span></div>
   </div></section>
   <section class="card"><h3>能量方位</h3><div class="dirs">
     ${dirs.map(x=>`<div class="dir"><div class="k">${x[0]}</div><div class="v">${arrow(x[1])}${x[1]}</div><div class="src">${x[2]}</div></div>`).join('')}
